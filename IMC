@@ -1,0 +1,19 @@
+# Solicita ao usuário que insira seu peso (em quilogramas) e altura (em metros)
+peso = float(input("Digite seu peso em quilogramas: "))
+altura = float(input("Digite sua altura em metros: "))
+
+# Calcula o IMC usando a fórmula IMC = peso / (altura * altura)
+imc = peso / (altura ** 2)
+
+# Exibe o resultado do cálculo do IMC
+print(f"Seu IMC é: {imc:.2f}")
+
+# Classifica o IMC com base nos padrões comuns
+if imc < 18.5:
+    print("Você está abaixo do peso.")
+elif 18.5 <= imc < 24.9:
+    print("Seu peso está dentro da faixa normal.")
+elif 25 <= imc < 29.9:
+    print("Você está com sobrepeso.")
+else:
+    print("Você está obeso.")
